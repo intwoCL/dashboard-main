@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
     <title>Administrador</title>
 
-    <link rel="stylesheet" href="template/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="template/assets/css/lineicons.css" />
-    <link rel="stylesheet" href="template/assets/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" href="template/assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="template/assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="template/assets/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('template/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('template/assets/css/lineicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('template/assets/css/materialdesignicons.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('template/assets/css/fullcalendar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('template/assets/css/fullcalendar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('template/assets/css/main.css') }}" />
 
     <style>
       .header {
@@ -28,15 +28,15 @@
     <div id="app">
         @yield('app')
     </div>
-    <script src="template/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="template/assets/js/Chart.min.js"></script>
-    <script src="template/assets/js/dynamic-pie-chart.js"></script>
-    <script src="template/assets/js/moment.min.js"></script>
-    <script src="template/assets/js/fullcalendar.js"></script>
-    <script src="template/assets/js/jvectormap.min.js"></script>
-    <script src="template/assets/js/world-merc.js"></script>
-    <script src="template/assets/js/polyfill.js"></script>
-    <script src="template/assets/js/main.js"></script>
+    <script src="{{ asset('template/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('template/assets/js/Chart.min.js') }}"></script>
+    <script src="{{ asset('template/assets/js/dynamic-pie-chart.js') }}"></script>
+    <script src="{{ asset('template/assets/js/moment.min.js') }}"></script>
+    <script src="{{ asset('template/assets/js/fullcalendar.js') }}"></script>
+    <script src="{{ asset('template/assets/js/jvectormap.min.js') }}"></script>
+    <script src="{{ asset('template/assets/js/world-merc.js') }}"></script>
+    <script src="{{ asset('template/assets/js/polyfill.js') }}"></script>
+    <script src="{{ asset('template/assets/js/main.js') }}"></script>
 
     <script>
         // ======== jvectormap activation

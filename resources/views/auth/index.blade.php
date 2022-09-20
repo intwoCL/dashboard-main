@@ -1,19 +1,24 @@
+@php
+  $u=''; $p='';
+  if (App::environment(['local'])) {
+    $u = "admin@edugestion.cl";
+    $p = 'admin.edugestion';
+  }
+
+@endphp
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
   <title>Administrador</title>
-  <link rel="stylesheet" href="template/assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="template/assets/css/lineicons.css" />
-  <link rel="stylesheet" href="template/assets/css/materialdesignicons.min.css" />
-  <link rel="stylesheet" href="template/assets/css/fullcalendar.css" />
-  <link rel="stylesheet" href="template/assets/css/main.css" />
+  <link rel="stylesheet" href="{{ asset('template/assets/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('template/assets/css/lineicons.css') }}" />
+  <link rel="stylesheet" href="{{ asset('template/assets/css/materialdesignicons.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('template/assets/css/main.css') }}" />
 </head>
-
 <body>
   <section class="signin-section">
     <div class="container-fluid">
@@ -28,10 +33,10 @@
                 </p>
               </div>
               <div class="cover-image">
-                <img src="template/assets/images/auth/signin-image.svg" alt="" />
+                <img src="{{ asset('template/assets/images/auth/signin-image.svg') }}" alt="" />
               </div>
               <div class="shape-image">
-                <img src="template/assets/images/auth/shape.svg" alt="" />
+                <img src="{{ asset('template/assets/images/auth/shape.svg') }}" alt="" />
               </div>
             </div>
           </div>
@@ -51,13 +56,13 @@
                   <div class="col-12">
                     <div class="input-style-1">
                       <label>Correo Electrónico</label>
-                      <input type="email" name="cname" placeholder="" required/>
+                      <input type="email" name="cname" value="{{ $u }}" placeholder="" required/>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="input-style-1">
                       <label>Contraseña</label>
-                      <input type="password" name="cpass" placeholder="" required/>
+                      <input type="password" name="cpass" value="{{ $p }}" placeholder="" required/>
                     </div>
                   </div>
                   {{-- <div class="col-xxl-6 col-lg-12 col-md-6">
@@ -85,15 +90,8 @@
         </div>
       </div>
   </section>
-  <script src="template/assets/js/bootstrap.bundle.min.js"></script>
-  <script src="template/assets/js/Chart.min.js"></script>
-  <script src="template/assets/js/dynamic-pie-chart.js"></script>
-  <script src="template/assets/js/moment.min.js"></script>
-  <script src="template/assets/js/fullcalendar.js"></script>
-  <script src="template/assets/js/jvectormap.min.js"></script>
-  <script src="template/assets/js/world-merc.js"></script>
-  <script src="template/assets/js/polyfill.js"></script>
-  <script src="template/assets/js/main.js"></script>
+  <script src="{{ asset('template/assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('template/assets/js/main.js') }}"></script>
 </body>
 
 </html>
